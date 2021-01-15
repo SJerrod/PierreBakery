@@ -1,0 +1,28 @@
+@{
+    Layout = "_Layout";
+}
+
+@using PierreBakery.Models;
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Mvc.Rendering;
+@model List<PierreBakery.Models.Treat>;
+
+<h3>List of current Treats:</h3>
+<br>
+@if (@Model.Count == 0)
+{
+    <h3>Sorry for the inconvinience but there are no Treats currently availible.</h3>
+}
+else
+{
+    <p>We currently have @Model.Count treat(s).</p>
+}
+@foreach(Treat treat in Model)
+{
+    <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@Html.ActionLink("Add new Treat", "Create")</p>
+}

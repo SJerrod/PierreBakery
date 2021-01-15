@@ -1,5 +1,5 @@
 @{
-  Layout = "_Layout";
+    Layout = "_Layout";
 }
 
 @model PierreBakery.Models.Flavor;
@@ -7,8 +7,8 @@
 <h4>Add a new Flavor</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Type)
-  @Html.TextBoxFor(model => model.Type)
-  <button type="submit"><span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span> Add Flavor</button>
+    @Html.LabelFor(model => model.Type)
+    @Html.TextBoxFor(model => model.Type)
+    <button type="submit"><span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span> Add Flavor</button>
 }
 <button onclick="window.history.back()"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back</button>
