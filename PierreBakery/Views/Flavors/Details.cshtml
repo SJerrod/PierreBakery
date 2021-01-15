@@ -32,6 +32,7 @@ else
     </ul>
 }
 <p>@Html.ActionLink("Back to Flavors", "Index")</p>
+<button onclick="window.history.back()"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back</button>
 
 @if (User.Identity.IsAuthenticated && ViewBag.IsCurrentUser)
 {
