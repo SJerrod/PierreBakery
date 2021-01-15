@@ -6,20 +6,27 @@
 
 <h1>Pierres Bakery Homepage</h1>
 <hr />
-<h3>List of current Flavors:</h3>
-<br>
-@foreach(Flavor flavor in Model["flavor"])
-{
-    <li>@Html.ActionLink($"{flavor.Type}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
-}
-<p>We currently have @Model["flavor"].Count flavor(s).</p>
-<p>@Html.ActionLink("Check availible Flavors", "Index", "Flavors")</p>
-<br>
-<h3>List of current Treats:</h3>
-<br>
-@foreach(Treat treat in Model["treat"])
-{
-    <li>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</li>
-}
-<p>We currently have @Model["treat"].Count treat(s).</p>
-<p>@Html.ActionLink("Check availible Treats", "Index", "Treats")</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>List of current Flavors:</h3>
+            <br>
+            @foreach(Flavor flavor in Model["flavor"])
+            {
+                <li>@Html.ActionLink($"{flavor.Type}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
+            }
+            <p>We currently have @Model["flavor"].Count flavor(s).</p>
+            <p>@Html.ActionLink("Check availible Flavors", "Index", "Flavors")</p>
+        </div>
+        <div class="col-md-6">
+            <h3>List of current Treats:</h3>
+            <br>
+            @foreach(Treat treat in Model["treat"])
+            {
+                <li>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</li>
+            }
+            <p>We currently have @Model["treat"].Count treat(s).</p>
+            <p>@Html.ActionLink("Check availible Treats", "Index", "Treats")</p>
+        </div>
+    </div>
+</div>
