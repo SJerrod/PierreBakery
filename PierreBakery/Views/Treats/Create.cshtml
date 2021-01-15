@@ -1,0 +1,14 @@
+@{
+    Layout = "_Layout";
+}
+
+@model PierreBakery.Models.Treat;
+
+<h4>Add a new Treat</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    <button type="submit"><span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span> Add Treat</button>
+}
+<button onclick="window.history.back()"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back</button>

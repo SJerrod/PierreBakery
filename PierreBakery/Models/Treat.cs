@@ -11,6 +11,7 @@ namespace PierreBakery.Models
 
         public int TreatId { get; set; }
         public string Name { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public ICollection<FlavorTreat> JoinEntries { get; set; }
     }
 }
