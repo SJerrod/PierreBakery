@@ -10,7 +10,7 @@ namespace PierreBakery.Models
         }
 
         public int FlavorId { get; set; }
-        public string type { get; set; }
+        public string Type { get; set; }
         public virtual ApplicationUser User { get; set; }
         public ICollection<FlavorTreat> JoinEntries { get; set; }
     }

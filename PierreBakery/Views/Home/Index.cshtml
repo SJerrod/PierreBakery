@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PierreBakery.Models;
+
+<h1>Pierres Bakery Homepage</h1>
+<hr />
+<p>You have @Model["flavor"].Count flavor(s).</p>
+<p>You have @Model["treat"].Count treat(s).</p>
+<br>
+<h3>List of Flavors:</h3>
+<br>
+@foreach(Flavor flavor in Model["flavor"])
+{
+  <li>@Html.ActionLink($"{flavor.Type}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
+}
+<br>
+<h3>List of Treats:</h3>
+<br>
+@foreach(Treat treat in Model["treat"])
+{
+  <li>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</li>
+}
+<br>
+<p>@Html.ActionLink("Check availible Flavors", "Index", "Flavors")</p>
+<p>@Html.ActionLink("Check availible Treats", "Index", "Treats")</p>
