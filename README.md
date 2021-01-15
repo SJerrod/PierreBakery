@@ -39,6 +39,11 @@ AppSettings
 }
 ```
 
+* Update the Server, Port, and User ID as needed.
+
+Import Database using Entity Framework Core
+* Type `dotnet ef database update` into the terminal to create your database tables.
+
 <!-- SQL Database Design
 <center>
 <img style="width: 50% height: 50%" src="./ReadMeAssets/sqlSchemaFactory.png">
