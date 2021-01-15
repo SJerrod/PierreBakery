@@ -5,9 +5,9 @@ using System.IO;
 
 namespace PierreBakery.Models
 {
-    public class PierreBakeryContextPierreBakery : IDesignTimeDbContextPierreBakery<PierreBakeryContext>
+    public class PierreBakeryContextPierreBakery : IDesignTimeDbContextFactory<PierreBakeryContext>
     {
-        PierreBakeryContext IDesignTimeDbContextPierreBakery<PierreBakeryContext>.CreateDbContext(string[] args)
+        PierreBakeryContext IDesignTimeDbContextFactory<PierreBakeryContext>.CreateDbContext(string[] args)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.Entity.FrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace PierreBakery.Models
 {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace PierreBakery.Models
 {
-    public class FlavorTreat
+    public class Flavor
     {
         public Flavor()
         {
@@ -11,6 +11,7 @@ namespace PierreBakery.Models
 
         public int FlavorId { get; set; }
         public string type { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public ICollection<FlavorTreat> JoinEntries { get; set; }
     }
 }
