@@ -13,14 +13,14 @@
 <br>
 @foreach(Flavor flavor in Model["flavor"])
 {
-  <li>@Html.ActionLink($"{flavor.Type}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
+    <li>@Html.ActionLink($"{flavor.Type}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
 }
 <br>
 <h3>List of Treats:</h3>
 <br>
 @foreach(Treat treat in Model["treat"])
 {
-  <li>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</li>
+    <li>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</li>
 }
 <br>
 <p>@Html.ActionLink("Check availible Flavors", "Index", "Flavors")</p>
