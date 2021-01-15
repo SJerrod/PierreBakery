@@ -49,5 +49,16 @@ namespace PierreBakery.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Details(int id)
+        {
+            var thisTreat = _db.Treats
+                .Include(treat => treat.JoinEntries)
+                .ThenInclude(join => join.Flavor)
+                .Include(treat => treat.User)
+                .FirstOrDefault(treat => treat.TreatId == id);
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            ViewBag.IsCurrentUser = userId != null ? userId == thisTreat.User.Id : false;
+            return View(thisTreat);
+        }
     }
 }

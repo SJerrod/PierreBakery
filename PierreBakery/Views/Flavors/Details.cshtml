@@ -5,13 +5,13 @@
 @* @using System.Security.Claims *@
 @model PierreBakery.Models.Flavor
 
-<h2>Item Details</h2>
+<h2>Flavor Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h3>
 
 @if(@Model.JoinEntries.Count == 0)
 {
-    <p>None of our Treats Use this Flavor</p>
+    <p>This flavor isnt used for any treats.</p>
 }
 else
 {
