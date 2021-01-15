@@ -2,7 +2,6 @@ using PierreBakery.Models;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -137,10 +136,10 @@ namespace PierreBakery.Controllers
         [HttpPost]
         public ActionResult DeleteFlavor(int joinId)
         {
-          var joinEntry = _db.FlavorTreat.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
-          _db.FlavorTreat.Remove(joinEntry);
-          _db.SaveChanges();
-          return RedirectToAction("Index");
+            var joinEntry = _db.FlavorTreat.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
+            _db.FlavorTreat.Remove(joinEntry);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

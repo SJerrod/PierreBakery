@@ -4,6 +4,6 @@ namespace PierreBakery.Models
 {
     public class ApplicationUser : IdentityUser
     {
-      
+        
     }
 }
