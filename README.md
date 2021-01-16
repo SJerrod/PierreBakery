@@ -1,15 +1,29 @@
 # _Pierre's Bakery_
 
+<p align="center">
+    <br>
+    <a href="https://github.com/SJerrod">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars1.githubusercontent.com/u/65928050?s=460&u=eae77ab164dde31ddbe95627ad67c5d7072ca033&v=4">
+    </a>
+</p>
+
+<p align="center">
+  <small>Last Updated: January 15th, 2021</small>
+</p>
+
 #### _Many to Many Database Relationship Project with Identity Authentication for Epicodus_ 
-#### _DATE 01.15.2021_
 
-#### By _**Jerrod Styrk**_
+# 🧑‍💻 Contributers
 
-## Description
+| Name | GitHub Profile |
+|------|----------------|
+|[Jerrod Styrk](https://www.linkedin.com/in/styrk-jerrodm/)|[SJerrod](https://github.com/SJerrod)|
+
+# ℹ️ Description
 
 This application will help a Bakery Owner keep track the Treats and Flavors they have to offer. They will be able to login giving them special permissions such as the user can Create/Delete/Edit treats or flavors. Users without an account can check treats to see what flavors are availible for each treat and they can check flavors to see which treats are availible for each flavor.
 
-## Setup/Installation Requirements
+# 💾 Installation Requirements
 
 Software Requirements
 * An internet browser of your choice; I prefer Chrome
@@ -17,6 +31,8 @@ Software Requirements
 * .NET Core
 * MySQL
 * MySQL Workbench
+
+# 🖥️ Opening the Project on your Local System
 
 Open by Downloading or Cloning
 - [Click to view Github repository](https://github.com/SJerrod/PierreBakery.Solution.git) Or simply paste the following url into your prefered browser https://github.com/SJerrod/PierreBakery.Solution.git
@@ -44,19 +60,22 @@ AppSettings
 Import Database using Entity Framework Core
 * Type `dotnet ef database update` into the terminal to create your database tables.
 
-<!-- SQL Database Design
+# 📊 SQL Schema
+
 <center>
-<img style="width: 50% height: 50%" src="./ReadMeAssets/sqlSchemaFactory.png">
-</center> -->
+<img style="width: 50% height: 50%" src="./ReadMeAssets/PierreBakerySchema.png">
+</center>
 
-## Known Bugs
+# 🪲 Bugs / Issues
 
+* User can add multiples of the same flavor to each treat
+* User can add multiples of the same treat to each flavor
 
-## Support and contact details
+# ☎️ Support / Contact Details
 
 * Please feel free to reach out to <jstyrk@citadel.edu>
 
-## Technologies Used
+# ⚙️ Technologies Used
 
 <details>
   <summary>Expand Tech/tools</summary>
@@ -70,7 +89,7 @@ Import Database using Entity Framework Core
 
 </details>
 
-### License
+# ©️ License & Copyright
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
