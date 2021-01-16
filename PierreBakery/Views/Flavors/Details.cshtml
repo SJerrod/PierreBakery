@@ -18,7 +18,7 @@ else
     <ul>
     @foreach(var join in Model.JoinEntries)
     {
-        <li>@join.Treat.Name</li>
+        <li class="detailList">@join.Treat.Name</li>
         @if (User.Identity.IsAuthenticated && ViewBag.IsCurrentUser)
         {   
             @using (Html.BeginForm("DeleteTreat", "Flavors"))

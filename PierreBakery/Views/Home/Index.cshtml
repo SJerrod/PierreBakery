@@ -15,8 +15,8 @@
             {
                 <li>@Html.ActionLink($"{flavor.Type}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
             }
-            <p>We currently have @Model["flavor"].Count flavor(s).</p>
-            <p>@Html.ActionLink("Check available Flavors", "Index", "Flavors")</p>
+            <p class="count">We currently have @Model["flavor"].Count flavor(s).</p>
+            <p class="lists">@Html.ActionLink("Check available Flavors", "Index", "Flavors")</p>
         </div>
         <div class="col-md-6">
             <h3>List of current Treats:</h3>
@@ -25,8 +25,8 @@
             {
                 <li>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</li>
             }
-            <p>We currently have @Model["treat"].Count treat(s).</p>
-            <p>@Html.ActionLink("Check available Treats", "Index", "Treats")</p>
+            <p class="count">We currently have @Model["treat"].Count treat(s).</p>
+            <p class="lists">@Html.ActionLink("Check available Treats", "Index", "Treats")</p>
         </div>
     </div>
 </div>
